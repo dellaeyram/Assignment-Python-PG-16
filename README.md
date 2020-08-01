@@ -19,4 +19,4 @@ Exceptions:
 With the if statement, when the end date is less than the start date entered, it will output the "print functions" but if it is greater than the start date, it continues to the "else statement" which outputs the amount made.
 The except section prints the "print functions" when there is a wrong format for the date and time or when the value entered in any of the format section is greater than the required input range.
 
-Teams:
+Team members:
