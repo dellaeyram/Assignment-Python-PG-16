@@ -13,6 +13,6 @@ It then gives Nana the amount of money he made tackling the task.
 
 The time entered and output from the program is stored in a csv/excel file(named:nana) with headings(START_DATE_&TIME, STOP_DATE&_TIME, HOURS_SPENT,AMOUNT_MADE)for future referencing.
 
-Program Dependencies: start_datetime stop_datetime
+Program Dependencies: start_datetime stop_datetime and rates
 
 Exceptions:
