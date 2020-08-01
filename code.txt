@@ -59,6 +59,35 @@ def whiteToFile(fileName="nana.txt", massage="Hello World\n"):
         file.write(massage) # writing to the file
         file.close()
         return "successful"   
+# if the file does not exist, create it and write a header before writing the main massage to it
+    else:
+        file = open(fileName, 'x') # creating the file
+        file.write("START_DATE_&_TIME, STOP_DATE_&_TIME, HOURS_SPENT, AMOUNT_MADE\n")  # write the header
+        file.write(massage) # write the massage
+        file.close()
+        return "successful"
+    return "not successful"
 
+
+# Exceptions
+try:
+    output = returnDateTime(firstInput, secondInput)
+    if(output[2] < 0):
+        print("\nPlease check your inputs and try again")
+        print("Start date and time cannot be greater then stop date and time")
+    else:
+        timeSpent = output[2]
+        amountMade = round(timeSpent * 5, 2)
+        massage = str(output[0]) + ', ' + str(output[1]) + ', ' + str(output[2])  + ', ' + str(amountMade) + '\n'
+        
+        print(f"\nYou spent {timeSpent} hour(s) on this task",)
+        print(f"Therefore you made ${amountMade}")
+        print("\nWriting to file was",whiteToFile(fileName='nana.csv',massage=massage))
+except IndexError:
+    print("\nPlease check your inputs and try again")
+    print("Your date time format is wrong")
+except ValueError as err:
+    print("\nPlease check your inputs and try again")
+    print(err)
 
     
