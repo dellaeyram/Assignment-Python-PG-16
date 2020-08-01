@@ -3,9 +3,11 @@ Python Time Tracking Program
 
 The program asks Nana to input the start date and time in the format [YYYY-MM-DD HH:MM:SS]. But more efficiently asks Nana to ENTER 'NOW' TO USE THE CURRENT TIME.
 
-Then asks him to Enter stop date and time also in the format [YYYY-MM-DD HH:MM:SS]
+Then asks him to enter the stop date and time also in the format: [YYYY-MM-DD HH:MM:SS]
 
-The program calculates the hours he spent on a task multiplies it with the expected rates
+The program calculates the hours he spent on a task by finding the diference between the dates(End Date-Start Date) measured in days and the time measured in seconds.
+
+And then multiplies it with the expected rates.
 
 It then gives Nana the amount of money he made tackling the task. 
 
