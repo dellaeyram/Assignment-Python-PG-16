@@ -27,6 +27,37 @@ def returnDateTime(startDateTime=str(datetime.now()), stopDateTime=str(datetime.
     for i in range(len(start_datetime)):
         startDatetime.append(int(round(float(start_datetime[i]))))
         stopDatetime.append(int(round(float(stop_datetime[i]))))
+   
+   #creating a datetime variables and saving the start and stop date and time in them
+    startDateTime = datetime(year=startDatetime[0],
+                             month=startDatetime[1],
+                             day=startDatetime[2],
+                             hour=startDatetime[3],
+                             minute=startDatetime[4],
+                             second=startDatetime[5])
 
+    stopDateTime = datetime(year=stopDatetime[0],
+                             month=stopDatetime[1],
+                             day=stopDatetime[2],
+                             hour=stopDatetime[3],
+                             minute=stopDatetime[4],
+                             second=stopDatetime[5])
+
+    #finding the diference between the date and time
+    timeResult = int((stopDateTime-startDateTime).seconds) # difference in time (seconds)
+    dateResult = int((stopDateTime-startDateTime).days) # difference in date (days)
+
+    timeInHours = (dateResult * 24) + (timeResult / 3600 )  # converting the days and seconds into hours
+
+    return startDateTime, stopDateTime, round(timeInHours, 3)
+
+#  creating/writing to a file
+def whiteToFile(fileName="nana.txt", massage="Hello World\n"):
+    # if the file exist just write the massage to it
+    if(path.exists(fileName)):
+        file = open(fileName, 'a')  # openning the file and add to what was already in there
+        file.write(massage) # writing to the file
+        file.close()
+        return "successful"
 
     
