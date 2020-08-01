@@ -20,3 +20,6 @@ With the if statement, when the end date is less than the start date entered, it
 The except section prints the "print functions" when there is a wrong format for the date and time or when the value entered in any of the format section is greater than the required input range.
 
 Team members:
+HOPE EWUDOR
+GODSWAY KWAKU ADZADZI
+FRANK OPOKU MENSAH
