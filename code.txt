@@ -1,0 +1,32 @@
+from _datetime import datetime
+from os import path
+
+print("\n=========================================================")
+print("====== YOU CAN ENTER 'NOW' TO USE THE CURRENT TIME ======")
+print("=========================================================\n")
+
+firstInput = input("Enter start date and time [YYYY-MM-DD HH:MM:SS]: ")
+if (firstInput.lower() == "now"):
+    firstInput = str(datetime.now())
+
+secondInput = input("Enter stop date and time [YYYY-MM-DD HH:MM:SS]: ")
+if (secondInput.lower() == "now"):
+    secondInput=str(datetime.now())
+
+#function to calculate the date and time
+def returnDateTime(startDateTime=str(datetime.now()), stopDateTime=str(datetime.now())):
+    #creating a list for date and time (as string)
+    start_datetime = ((startDateTime.split(" ")[0]).split("-") ) + ((startDateTime.split(" ")[1]).split(":")) # list to store the start date and time as string
+    stop_datetime = ((stopDateTime.split(" ")[0]).split("-") ) + ((stopDateTime.split(" ")[1]).split(":")) # list to store the stop date and time as string
+
+    #creating a list for date and time (as int)
+    startDatetime = [] # list to save converted the start date and time from string to int
+    stopDatetime = [] # list to save converted the stop date and time from string to int
+
+    #converting date and time from string to int and appending them to their respective list
+    for i in range(len(start_datetime)):
+        startDatetime.append(int(round(float(start_datetime[i]))))
+        stopDatetime.append(int(round(float(stop_datetime[i]))))
+
+
+    
