@@ -1,5 +1,6 @@
 # Assignment-Python-PG-16
 Python Time Tracking Program
+
 This document defines the implementation process,design, program dependencies and team(contributors)  for this python code.
 
 The program asks Nana to input the start date and time in the format [YYYY-MM-DD HH:MM:SS]. But more efficiently asks Nana to ENTER 'NOW' TO USE THE CURRENT TIME.
