@@ -21,5 +21,7 @@ The except section prints the "print functions" when there is a wrong format for
 
 Team members:
 HOPE EWUDOR
+
 GODSWAY KWAKU ADZADZI
+
 FRANK OPOKU MENSAH
